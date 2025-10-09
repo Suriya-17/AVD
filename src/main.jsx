@@ -11,8 +11,8 @@ import Testingpage from './pages/Testingpage.jsx';
 const primaryTheme = {
   colors: {
     "primary": "#f97306",
-    "background-light": "#f8f7f5",
-    "background-dark": "#1a1a1a",
+    "backgroundLight": "#f8f7f5",
+    "backgroundDark": "#1a1a1a",
   },
 }
 
