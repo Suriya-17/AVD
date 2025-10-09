@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import logo from '../assets/logo.png';
-import { data, Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 const NavbarContainer = styled.div`
     font-family: "Playfair Display";
@@ -15,10 +15,9 @@ const NavbarContainer = styled.div`
     }
 
 `
-
 function Navbar() {
     return (
-        <NavbarContainer data="blue">
+        <NavbarContainer>
             <div className='logo_container'>
                 <img src={logo} className='main_logo' />
                 <h1 className='logo'>Arjun Digital Solutions</h1>
