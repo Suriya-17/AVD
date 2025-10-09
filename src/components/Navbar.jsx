@@ -4,56 +4,68 @@ import logo from '../assets/logo.png';
 import { data, Link } from 'react-router-dom';
 
 const NavbarContainer = styled.div`
-    font-family: "Playfair Display";
-    color: ${props => props.theme.colors.backgroundLight}; 
+  font-family: "Playfair Display";
+  color: ${props => props.theme.colors.backgroundLight};
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: solid 1px ${props => props.theme.colors.primary};
+  background-color: ${props => props.theme.colors.backgroundDark};
+  padding: 0 20px; 
+
+  height: 70px; 
+
+  .logo_container {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    border-bottom: solid 1px ${props => props.theme.colors.primary} ;
-    background-color: ${props => props.theme.colors.backgroundDark} ;
-    padding: 10px;
 
-    .logo_container {
-        display: flex;
-        align-items : center ;
-        .main_logo {
-            height: 50px; 
-        }
-        .logo_text{
-            font-size: 1.5rem;
-            vertical-align: center;
-            font-weight: bold; 
-        }
-    }
-    .nav_links{
-        padding-top: 10px;
-        margin-right: 90px;
-        ul{
-            display: flex;
-            list-style-type: none;
-            gap: 35px;
-            li{
-                font-size: large;
-                a{
-                    text-decoration: none;
-                    color:  ${props => props.theme.colors.backgroundLight}
-                }
-            }
-        }
-    }
-    .nav_btn{
-        
-        button{
-            background-color: ${props => props.theme.colors.primary};
-            color: ${props => props.theme.colors.backgroundLight};
-            font-weight: bold;
-            padding: 10px 30px 10px 30px;
-            border: none;
-            border-radius: 10px;
-            margin-right: 20px;
-        }
+    .main_logo {
+      height: 40px;
+      margin-right: 10px;
     }
 
+    .logo_text {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: ${props => props.theme.colors.backgroundLight};
+      margin: 0; 
+    }
+  }
+
+  .nav_links {
+    margin-right: 90px;
+    padding-top: 0; 
+
+    ul {
+      display: flex;
+      list-style-type: none;
+      gap: 35px;
+      margin: 0; 
+      padding: 0; 
+
+      li {
+        font-size: large;
+
+        a {
+          text-decoration: none;
+          color: ${props => props.theme.colors.backgroundLight};
+        }
+      }
+    }
+  }
+
+  .nav_btn {
+    button {
+      background-color: ${props => props.theme.colors.primary};
+      color: ${props => props.theme.colors.backgroundLight};
+      font-weight: bold;
+      padding: 8px 20px;
+      border: none;
+      border-radius: 10px;
+      margin-right: 10px;
+      cursor: pointer;
+    }
+  }
 `
 
 function Navbar() {
