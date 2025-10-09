@@ -14,6 +14,10 @@ const primaryTheme = {
     "backgroundLight": "#f8f7f5",
     "backgroundDark": "#1a1a1a",
   },
+  fonts: {
+    headingFont: "Playfair Display",
+    secondaryFont: "Work Sans",
+  }
 }
 
 const router = createBrowserRouter([

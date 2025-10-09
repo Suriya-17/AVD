@@ -4,7 +4,7 @@ import logo from '../assets/logo.png';
 import { Link } from 'react-router-dom';
 
 const NavbarContainer = styled.div`
-  font-family: "Work Sans";
+  font-family: ${props => props.theme.fonts.secondaryFont};
   color: ${props => props.theme.colors.backgroundLight};
   display: flex;
   justify-content: space-between;
@@ -49,7 +49,12 @@ const NavbarContainer = styled.div`
         a {
           text-decoration: none;
           color: ${props => props.theme.colors.backgroundLight};
+          transition: color 0.3s ease-in-out;
         }
+        a:hover{
+            color: ${props => props.theme.colors.primary};
+        }
+        
       }
     }
   }
@@ -64,6 +69,12 @@ const NavbarContainer = styled.div`
       border-radius: 10px;
       margin-right: 10px;
       cursor: pointer;
+    }
+    button:hover{
+        background: linear-gradient(
+                     rgba(0, 0, 0, 0.1),
+                     rgba(0, 0, 0, 0.1)
+                    ), ${props => props.theme.colors.primary};
     }
   }
 `
