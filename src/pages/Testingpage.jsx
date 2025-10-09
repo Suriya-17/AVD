@@ -1,9 +1,14 @@
 import React from 'react'
 
-function Testingpage() {
-  return (
-    <div>Testingpage</div>
-  )
-}
+import Navbar from '../components/Navbar'
 
-export default Testingpage;
+function Testingpage() {
+    return (
+        <>
+            <Navbar />
+        </>
+
+    )
+}
+export default Testingpage
+
