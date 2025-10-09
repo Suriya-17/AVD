@@ -6,7 +6,7 @@ import "../node_modules/bootstrap/dist/css/bootstrap.min.css"
 
 import './App.scss';
 import App from './App.jsx';
-import Testingpage from './pages/Testingpage.jsx';
+import Testingpage from './pages/development/Testingpage.jsx';
 
 const primaryTheme = {
   colors: {
