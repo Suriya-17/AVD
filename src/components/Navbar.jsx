@@ -4,7 +4,7 @@ import logo from '../assets/logo.png';
 import { data, Link } from 'react-router-dom';
 
 const NavbarContainer = styled.div`
-  font-family: "Playfair Display";
+  font-family: "Work Sans";
   color: ${props => props.theme.colors.backgroundLight};
   display: flex;
   justify-content: space-between;
