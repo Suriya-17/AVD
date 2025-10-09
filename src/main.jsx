@@ -6,9 +6,14 @@ import "../node_modules/bootstrap/dist/css/bootstrap.min.css"
 
 import './App.scss';
 import App from './App.jsx';
+import Testingpage from './pages/Testingpage.jsx';
 
 const primaryTheme = {
-  bgColor: "#000",
+  colors: {
+    "primary": "#f97306",
+    "background-light": "#f8f7f5",
+    "background-dark": "#1a1a1a",
+  },
 }
 
 const router = createBrowserRouter([
@@ -19,6 +24,10 @@ const router = createBrowserRouter([
   {
     path: "/home",
     element: <App />
+  },
+  {
+    path: "/test",
+    element: <Testingpage />
   }
 ])
 
