@@ -3,20 +3,18 @@ import styled, { ThemeProvider } from "styled-components";
 import Navbar from "./components/Navbar";
 
 
-
 const AppWrapper = styled.div`
-  .something{
+  h1 {
     background-color: ${props => props.bgColor};
     height: 100vh;
   }
   
 `
-
 function App() {
   return (
     <AppWrapper>
       <Navbar />
-      <h1 className="something">somthing</h1>
+      <h1>somthing</h1>
     </AppWrapper>
   )
 }
