@@ -16,7 +16,7 @@ function App() {
   return (
     <AppWrapper>
       <Navbar />
-      <h1 className="something">somthing</h1>
+      <h1 className="something">Testing</h1>
     </AppWrapper>
   )
 }
