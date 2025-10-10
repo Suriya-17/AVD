@@ -2,6 +2,7 @@ import React from 'react'
 import styled from 'styled-components';
 
 const CardContainer = styled.div`
+    font-family: ${props => props.theme.fonts.secondaryFont};
     display: flex;
     flex-direction: column;
     justify-content: center;
