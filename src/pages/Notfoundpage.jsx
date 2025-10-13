@@ -14,21 +14,23 @@ const PageContainer = styled.div`
     justify-content: center;
     padding: 40px;
     text-align: center;
-    font-family: 'Poppins', sans-serif; /* Assuming a modern sans-serif like Poppins/Inter/Arial */
+    font-family: ${({theme}) => theme.fonts.secondaryFont}; /* Assuming a modern sans-serif like Poppins/Inter/Arial */
 `;
 
 const ErrorCode = styled.h1`
+    font-family: ${({theme}) => theme.fonts.headingFont};
     font-size: 10rem; /* 160px for a massive, impactful number */
     font-weight: 800;
     color: #FF6F00; /* Orange accent color */
     margin: 0;
-    line-height: 1;
+    line-height: 1.5;
     @media (max-width: 600px) {
         font-size: 6rem;
     }
 `;
 
 const SubHeading = styled.h2`
+    font-family: ${({theme}) => theme.fonts.headingFont};
     font-size: 2.25rem; /* 36px */
     font-weight: 600;
     margin-bottom: 0.5rem;
@@ -47,7 +49,7 @@ const Message = styled.p`
 
 const HomeButton = styled.a`
     background-color: #FF6F00; /* Orange background for CTA */
-    color: #121212; /* Dark text on the button */
+    color: #ffffff; /* Dark text on the button */
     border: none;
     padding: 1rem 2.5rem; /* 16px 40px */
     font-size: 1.125rem; /* 18px */

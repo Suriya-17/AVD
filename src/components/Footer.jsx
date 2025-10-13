@@ -5,6 +5,9 @@ import { Link } from "react-router-dom";
 
 const FooterContainer = styled.div`
     position: absolute;
+    max-width: 1440px;
+    /* justify-self: center; */
+    margin: 0 auto;
     left: 0;
     right: 0;
     bottom: 0;

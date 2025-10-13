@@ -6,13 +6,6 @@ import Footer from "../components/Footer";
 import ServiceCard from "../components/ServiceCard";
 import FAQ from "../components/Home/FAQ";
 
-const HomeContainer = styled.section`
-    position: relative;
-    background-color: ${(props) => props.theme.colors.backgroundGrey};
-    padding-bottom: 200px;
-    min-height: 100vh;
-`;
-
 const ServicesContainer = styled.section`
     min-height: 80vh;
     padding: 3rem;
@@ -21,19 +14,20 @@ const ServicesContainer = styled.section`
     align-items: center;
     justify-content: center;
     color: ${({ theme }) => theme.colors.backgroundLight};
-    
+
     .font-heading {
-      font-family: ${({ theme }) => theme.fonts.headingFont};
-      padding: 2rem;
-      font-size: 3rem;
+        font-family: ${({ theme }) => theme.fonts.headingFont};
+        padding: 2rem;
+        font-size: 3rem;
     }
 
     .gridContainer {
         display: grid;
         grid-gap: 1rem;
         grid-template-columns: repeat(3, 1fr);
-      }
-      `;
+    }
+`;
+
 const ClientStoriesContainer = styled.section`
     min-height: 80vh;
     padding: 3rem;
@@ -45,9 +39,9 @@ const ClientStoriesContainer = styled.section`
     color: ${({ theme }) => theme.colors.backgroundLight};
 
     .font-heading {
-      font-family: ${({ theme }) => theme.fonts.headingFont};
-      padding: 2rem;
-      font-size: 3rem;
+        font-family: ${({ theme }) => theme.fonts.headingFont};
+        padding: 2rem;
+        font-size: 3rem;
     }
 
     .gridContainer {
@@ -59,8 +53,7 @@ const ClientStoriesContainer = styled.section`
 
 function Home() {
     return (
-        <HomeContainer>
-            <Navbar />
+        <>
             <HeroCarousel />
 
             <ServicesContainer>
@@ -81,10 +74,8 @@ function Home() {
                 </div>
             </ClientStoriesContainer>
 
-            <FAQ/>
-
-            <Footer />
-        </HomeContainer>
+            <FAQ />
+        </>
     );
 }
 
