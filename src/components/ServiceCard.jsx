@@ -68,4 +68,4 @@ function ServiceCard(props) {
   )
 }
 
-export default ServiceCard
+export default ServiceCard;
