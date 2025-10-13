@@ -7,12 +7,15 @@ import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import './App.scss';
 import App from './App.jsx';
 import Testingpage from './pages/development/Testingpage.jsx';
+import Home from './pages/Home.jsx'
+import Notfoundpage from './pages/Notfoundpage.jsx';
 
 const primaryTheme = {
   colors: {
-    "primary": "#f97306",
-    "backgroundLight": "#f8f7f5",
-    "backgroundDark": "#1a1a1a",
+    primary: "#f97306",
+    backgroundLight: "#f8f7f5",
+    backgroundDark: "#141515",
+    backgroundGrey: "#1b1a1a",
   },
   fonts: {
     headingFont: "Playfair Display",
@@ -23,15 +26,19 @@ const primaryTheme = {
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <App />
+    element: <Home />
   },
   {
     path: "/home",
-    element: <App />
+    element: <Home/>
   },
   {
     path: "/test",
     element: <Testingpage />
+  },
+  {
+    path:"*",
+    element:<Notfoundpage/>,
   }
 ])
 
