@@ -9,7 +9,7 @@ const NavbarContainer = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom: solid 1px ${props => props.theme.colors.primary};
+  border-bottom: solid 1px ${props => props.theme.colors.primaryDark};
   background-color: ${props => props.theme.colors.backgroundDark};
   padding: 0 20px; 
 
@@ -88,7 +88,7 @@ function Navbar() {
             <div className='nav_links'>
                 <ul>
                     <li>
-                        <Link>Home</Link>
+                        <Link to='home'>Home</Link>
                     </li>
                     <li>
                         <Link>Services</Link>
