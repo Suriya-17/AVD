@@ -5,6 +5,7 @@ import HeroCarousel from "../components/Home/Hero";
 import Footer from "../components/Footer";
 import ServiceCard from "../components/ServiceCard";
 import FAQ from "../components/Home/FAQ";
+import ClientStoryCard from "../components/ClientStoryCard";
 
 const ServicesContainer = styled.section`
     min-height: 80vh;
@@ -68,9 +69,9 @@ function Home() {
             <ClientStoriesContainer>
                 <h2 className="font-heading">Client Success Stories</h2>
                 <div className="gridContainer">
-                    <ServiceCard />
-                    <ServiceCard />
-                    <ServiceCard />
+                    <ClientStoryCard />
+                    <ClientStoryCard />
+                    <ClientStoryCard />
                 </div>
             </ClientStoriesContainer>
 
