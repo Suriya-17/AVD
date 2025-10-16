@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import logo from '../assets/logo.png';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 
 const NavbarContainer = styled.div`
   font-family: ${props => props.theme.fonts.secondaryFont};
@@ -46,11 +46,17 @@ const NavbarContainer = styled.div`
       li {
         font-size: large;
 
-        a {
+        .link {
           text-decoration: none;
           color: ${props => props.theme.colors.backgroundLight};
           transition: color 0.3s ease-in-out;
         }
+
+        .active-link{
+          text-decoration: none;
+          color: ${props => props.theme.colors.primary};
+        }
+
         a:hover{
             color: ${props => props.theme.colors.primary};
         }
@@ -88,19 +94,19 @@ function Navbar() {
             <div className='nav_links'>
                 <ul>
                     <li>
-                        <Link to='home'>Home</Link>
+                         <NavLink to='/' className={({ isActive }) => (isActive ? "link active-link" : "link")}>Home</NavLink>
                     </li>
                     <li>
-                        <Link>Services</Link>
+                        <NavLink to='/services' className={({ isActive }) => (isActive ? "link active-link" : "link")}>Services</NavLink>
                     </li>
                     <li>
-                        <Link>Portfolio</Link>
+                        <NavLink to='/portfolio' className={({ isActive }) => (isActive ? "link active-link" : "link")}>Portfolio</NavLink>
                     </li>
                     <li>
-                        <Link>About</Link>
+                        <NavLink to='/about' className={({ isActive }) => (isActive ? "link active-link" : "link")}>About</NavLink>
                     </li>
                     <li>
-                        <Link>Contact</Link>
+                        <NavLink to='/contact' className={({ isActive }) => (isActive ? "link active-link" : "link")}>Contact</NavLink>
                     </li>
                 </ul>
             </div>

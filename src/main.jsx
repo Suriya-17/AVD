@@ -9,6 +9,7 @@ import App from './App.jsx';
 import Testingpage from './pages/development/Testingpage.jsx';
 import Home from './pages/Home.jsx'
 import Notfoundpage from './pages/Notfoundpage.jsx';
+import Portfolio from './pages/Portfolio.jsx';
 
 const primaryTheme = {
   colors: {
@@ -40,7 +41,11 @@ const router = createBrowserRouter([
   {
     path:"*",
     element:<Notfoundpage/>,
-  }
+  },
+  {
+    path:"/portfolio",
+    element:<Portfolio/>,
+  },
 ])
 
 createRoot(document.getElementById('root')).render(
