@@ -1,8 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-// You would typically install styled-components: npm install styled-components
-
-// --- 🎨 Styled Components Definitions ---
+import { Link } from 'react-router-dom';
 
 const PageContainer = styled.div`
     background-color: #121212; /* Dark background */
@@ -47,12 +45,12 @@ const Message = styled.p`
     line-height: 1.6;
 `;
 
-const HomeButton = styled.a`
-    background-color: #FF6F00; /* Orange background for CTA */
-    color: #ffffff; /* Dark text on the button */
+const HomeButton = styled.button`
+    background-color: #FF6F00; 
+    color: #ffffff; 
     border: none;
-    padding: 1rem 2.5rem; /* 16px 40px */
-    font-size: 1.125rem; /* 18px */
+    padding: 1rem 2.5rem; 
+    font-size: 1.125rem; 
     font-weight: 600;
     border-radius: 5px;
     cursor: pointer;
@@ -63,8 +61,8 @@ const HomeButton = styled.a`
     box-shadow: 0 4px 15px rgba(255, 111, 0, 0.4);
 
     &:hover {
-        background-color: #FF8F33; /* Slightly lighter orange on hover */
-        transform: translateY(-2px); /* Subtle lift effect */
+        background-color: #FF8F33; 
+        transform: translateY(-2px); 
     }
 `;
 
@@ -76,10 +74,11 @@ const Notfoundpage = () => {
             <Message>
                 We can't seem to find the page you're looking for. It might have been moved, updated, or simply doesn't exist.
             </Message>
-            {/* In a real application, replace <a> with <Link to="/"> from react-router-dom */}
-            <HomeButton href="/">
-                Go Back Home
-            </HomeButton>
+            <Link to="/">
+                <HomeButton href="/">
+                    Go Back Home
+                </HomeButton>
+            </Link>
         </PageContainer>
     );
 };

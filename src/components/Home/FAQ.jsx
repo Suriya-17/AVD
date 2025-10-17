@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import { FiPlus, FiX } from "react-icons/fi";
+import { faqData } from "../../data";
 
 const FAQSection = styled.section`
     background-color: ${({ theme }) => theme.colors.backgroundGrey};
@@ -70,24 +71,6 @@ const FAQ = () => {
         setOpenIndex(openIndex === index ? null : index);
     };
 
-    const faqData = [
-        {
-            question: "What is digital marketing?",
-            answer: "Digital marketing is the promotion of brands to connect with potential customers using the internet and other forms of digital communication. This includes not only email, social media, and web-based advertising, but also text and multimedia messages as a marketing channel.",
-        },
-        {
-            question: "How long does it take to see results from SEO?",
-            answer: "SEO results typically start to appear within 3 to 6 months depending on your website's domain authority, content quality, and competition in your niche.",
-        },
-        {
-            question: "What is the ROI of social media marketing?",
-            answer: "The ROI of social media marketing depends on your goals. It can range from increased engagement and brand awareness to higher conversions and customer loyalty.",
-        },
-        {
-            question: "Do you offer customized digital marketing packages?",
-            answer: "Yes, we provide tailored marketing packages designed to match your business goals, target audience, and budget.",
-        },
-    ];
 
     return (
         <FAQSection id="faq">

@@ -16,9 +16,9 @@ import About from "./pages/About.jsx";
 import Contact from "./pages/Contact.jsx";
 import SEO from "./pages/services/SEO.jsx";
 import SMM from "./pages/services/SMM.jsx";
+import PPC from "./pages/services/PPC.jsx";
+import ContentMarketing from "./pages/services/ContentMarketing.jsx";
 import WebDesign from "./pages/services/WebDesign.jsx";
-
-
 
 const router = createBrowserRouter([
     {
@@ -34,22 +34,24 @@ const router = createBrowserRouter([
                 element: <Home />,
             },
             {
-                path: "services",
-                element: <Services />,
-                children: [
-                    {
-                        path: "seo",
-                        element: <SEO />,
-                    },
-                    {
-                        path: "smm",
-                        element: <SMM />,
-                    },
-                    {
-                        path: "webdesign",
-                        element: <WebDesign />,
-                    },
-                ],
+                path: "seo",
+                element: <SEO />,
+            },
+            {
+                path: "smm",
+                element: <SMM />,
+            },
+            {
+                path: "ppc",
+                element: <PPC />,
+            },
+            {
+                path: "webdesign",
+                element: <WebDesign />,
+            },
+            {
+                path: "contentmarketing",
+                element: <ContentMarketing />,
             },
             {
                 path: "portfolio",

@@ -6,7 +6,7 @@ import ServiceCard from '../../components/ServiceCard';
 import Footer from '../../components/Footer';
 import ClientStoryCard from '../../components/ClientStoryCard';
 import ImageContainer from '../../components/Portfolio/ImageContainer';
-import Smm from '../services/Smm';
+import Smm from '../services/SMM';
 
 function Testingpage() {
     return (

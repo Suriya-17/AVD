@@ -197,12 +197,12 @@ const DominateContainer = styled.div`
     }
 `;
 
-function SMM() {
+function EmailMarketing() {
     return (
         <PageContainer>
             {/* <Navbar /> */}
             <HeroContainer>
-                <h1>Social Media Marketing</h1>
+                <h1>Web Desinging & Development</h1>
                 <p className="sub-text">
                     Engage, influence, and grow your audience with our dynamic
                     social media strategies. We turn followers into loyal
@@ -312,4 +312,7 @@ function SMM() {
     );
 }
 
-export default SMM;
+
+
+
+export default EmailMarketing;
