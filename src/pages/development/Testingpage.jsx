@@ -5,15 +5,13 @@ import TestimonialCard from '../../components/TestimonialCard';
 import ServiceCard from '../../components/ServiceCard';
 import Footer from '../../components/Footer';
 import ClientStoryCard from '../../components/ClientStoryCard';
+import ImageContainer from '../../components/Portfolio/ImageContainer';
+import Smm from '../services/Smm';
 
 function Testingpage() {
     return (
         <>
-            <Navbar />
-            <TestimonialCard image="src\components\placeholder.jpg" quotes="SuperMan must be stopped!" clientName="Lex Luthor" clientDetails="CEO, LexCorp"/>
-            <ServiceCard serviceName="Search Engine Optimization (SEO)" description = "Boost your online visiblity and attract more customers with our proven SEO strategies that are designed to rank you higher upon goggle searches" image="src/assets/placeholder.png"/>
-            <ClientStoryCard clientStory="Hello Everynyan dho wihdi aiibfi ihawsbi iahwd aiwhi aiwbbia iwbrb" image="src\assets\placeholder.png" clientName="Jamal Bee"/>
-            <Footer/>
+            <Smm/>
         </>
 
     )

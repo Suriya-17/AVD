@@ -1,3 +1,7 @@
+import React from 'react';
+import styled from 'styled-components';
+import logo from '../assets/logo.png';
+import { Link, NavLink } from 'react-router-dom';
 import React from "react";
 import styled from "styled-components";
 import logo from "../assets/logo.png";
@@ -46,6 +50,24 @@ const NavbarContainer = styled.div`
             li {
                 font-size: large;
 
+        .link {
+          text-decoration: none;
+          color: ${props => props.theme.colors.backgroundLight};
+          transition: color 0.3s ease-in-out;
+        }
+
+        .active-link{
+          text-decoration: none;
+          color: ${props => props.theme.colors.primary};
+        }
+
+        a:hover{
+            color: ${props => props.theme.colors.primary};
+        }
+        
+      }
+    }
+  }
                 a {
                     text-decoration: none;
                     color: ${(props) => props.theme.colors.backgroundLight};
@@ -85,18 +107,23 @@ function Navbar() {
             <div className="nav_links">
                 <ul>
                     <li>
+                         <NavLink to='/' className={({ isActive }) => (isActive ? "link active-link" : "link")}>Home</NavLink>
                         <Link to="home">Home</Link>
                     </li>
                     <li>
+                        <NavLink to='/services' className={({ isActive }) => (isActive ? "link active-link" : "link")}>Services</NavLink>
                         <Link to="services">Services</Link>
                     </li>
                     <li>
+                        <NavLink to='/portfolio' className={({ isActive }) => (isActive ? "link active-link" : "link")}>Portfolio</NavLink>
                         <Link to="portfolio">Portfolio</Link>
                     </li>
                     <li>
+                        <NavLink to='/about' className={({ isActive }) => (isActive ? "link active-link" : "link")}>About</NavLink>
                         <Link to="about">About</Link>
                     </li>
                     <li>
+                        <NavLink to='/contact' className={({ isActive }) => (isActive ? "link active-link" : "link")}>Contact</NavLink>
                         <Link to="contact">Contact</Link>
                     </li>
                 </ul>

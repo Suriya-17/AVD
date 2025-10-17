@@ -43,11 +43,11 @@ const router = createBrowserRouter([
                     },
                     {
                         path: "smm",
-                        element: <SEO />,
+                        element: <SMM />,
                     },
                     {
                         path: "webdesign",
-                        element: <SEO />,
+                        element: <WebDesign />,
                     },
                 ],
             },
