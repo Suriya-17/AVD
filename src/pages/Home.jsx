@@ -7,6 +7,8 @@ import ServiceCard from "../components/ServiceCard";
 import FAQ from "../components/Home/FAQ";
 import ClientStoryCard from "../components/ClientStoryCard";
 
+import { HomePageServicesData } from "../data";
+
 const ServicesContainer = styled.section`
     min-height: 80vh;
     padding: 3rem;
@@ -60,9 +62,14 @@ function Home() {
             <ServicesContainer>
                 <h2 className="font-heading">Our Services</h2>
                 <div className="gridContainer">
-                    <ServiceCard />
-                    <ServiceCard />
-                    <ServiceCard />
+                    {
+                        HomePageServicesData.map( data => {
+                            return(
+                                <ServiceCard image={data.imgData} serviceName = {data.title} description={data.description} link={data.link}/>
+                            )
+                        })
+                    }
+                    
                 </div>
             </ServicesContainer>
 
