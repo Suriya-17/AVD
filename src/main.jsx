@@ -18,6 +18,7 @@ import SEO from "./pages/services/SEO.jsx";
 import SMM from "./pages/services/SMM.jsx";
 import PPC from "./pages/services/PPC.jsx";
 import ContentMarketing from "./pages/services/ContentMarketing.jsx";
+import EmailMarketing from "./pages/services/EmailMarketing.jsx";
 import WebDesign from "./pages/services/WebDesign.jsx";
 
 const router = createBrowserRouter([
@@ -52,6 +53,10 @@ const router = createBrowserRouter([
             {
                 path: "contentmarketing",
                 element: <ContentMarketing />,
+            },
+            {
+                path: "emailmarketing",
+                element: <EmailMarketing />,
             },
             {
                 path: "portfolio",
