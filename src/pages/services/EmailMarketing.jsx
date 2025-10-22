@@ -1,10 +1,11 @@
 import React from "react";
 import styled from "styled-components";
-import Navbar from "../../components/Navbar";
 import ApproachCard from "../../components/Services/ApproachCard";
 import StrategyCard from "../../components/Services/StrategyCard";
-import Footer from "../../components/Footer";
 import SuccessStoryCard from "../../components/Services/SuccessStoryCard";
+import CommonHero from "../../components/CommonHero";
+import { HeroData } from "../../data";
+
 
 const PageContainer = styled.div`
     position: relative;
@@ -13,48 +14,48 @@ const PageContainer = styled.div`
     min-height: 100vh;
 `;
 
-const HeroContainer = styled.div`
-    display: flex;
-    position: relative;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    padding: 70px 30px;
-    color: ${(props) => props.theme.colors.backgroundLight};
-    min-height: 40vh;
-    z-index: 1;
+// const HeroContainer = styled.div`
+//     display: flex;
+//     position: relative;
+//     justify-content: center;
+//     flex-direction: column;
+//     align-items: center;
+//     padding: 70px 30px;
+//     color: ${(props) => props.theme.colors.backgroundLight};
+//     min-height: 40vh;
+//     z-index: 1;
 
-    &::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
+//     &::before {
+//         content: "";
+//         position: absolute;
+//         top: 0;
+//         left: 0;
+//         right: 0;
+//         bottom: 0;
 
-        background-image: url(src/assets/placeholder.png);
-        background-size: cover;
-        background-position: center;
+//         background-image: url(src/assets/placeholder.png);
+//         background-size: cover;
+//         background-position: center;
 
-        opacity: 0.4;
+//         opacity: 0.4;
 
-        z-index: -1;
-    }
+//         z-index: -1;
+//     }
 
-    h1 {
-        font-family: ${(props) => props.theme.fonts.headingFont};
-        font-weight: 800;
-        font-size: 3rem;
-    }
+//     h1 {
+//         font-family: ${(props) => props.theme.fonts.headingFont};
+//         font-weight: 800;
+//         font-size: 3rem;
+//     }
 
-    p {
-        font-family: ${(props) => props.theme.fonts.secondaryFont};
-        width: 800px;
-        overflow-wrap: break-word;
-        text-align: center;
-        font-size: 18px;
-    }
-`;
+//     p {
+//         font-family: ${(props) => props.theme.fonts.secondaryFont};
+//         width: 800px;
+//         overflow-wrap: break-word;
+//         text-align: center;
+//         font-size: 18px;
+//     }
+// `;
 
 const ApproachContainer = styled.div`
     background-color: ${(props) => props.theme.colors.backgroundGrey};
@@ -201,14 +202,7 @@ function EmailMarketing() {
     return (
         <PageContainer>
             {/* <Navbar /> */}
-            <HeroContainer>
-                <h1>Web Desinging & Development</h1>
-                <p className="sub-text">
-                    Engage, influence, and grow your audience with our dynamic
-                    social media strategies. We turn followers into loyal
-                    customers. Our Approach to Social Success.
-                </p>
-            </HeroContainer>
+            <CommonHero data = { HeroData.emData }/>
 
             <ApproachContainer>
                 <ApproachText>
