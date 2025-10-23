@@ -63,38 +63,3 @@ export const faqData = [
         answer: "Yes, we provide tailored marketing packages designed to match your business goals, target audience, and budget.",
     },
 ];
-
-export const HeroData = {
-    contactData : {
-        title : "Contact us",
-        description : "We're here to help. Reach out us for any inquires or to start your next project.",
-    },
-    aboutData : {
-        title : "About Arjun Digital Solutions",
-        description : "We're here to help. Reach out us for any inquires or to start your next project.",
-    },
-    seoData : {
-        title : "Search Engine Optimization(SEO)",
-        description : "Boost your online visibility and attract more customers with our proven SEO strategies.",
-    },
-    smmData : {
-        title : "Contact us",
-        description : "We're here to help. Reach out us for any inquires or to start your next project.",
-    },
-    cmData : {
-        title : "Contact us",
-        description : "We're here to help. Reach out us for any inquires or to start your next project.",
-    },
-    ppcData : {
-        title : "Contact us",
-        description : "We're here to help. Reach out us for any inquires or to start your next project.",
-    },
-    emData : {
-        title : "Email Marketing",
-        description : "We're here to help. Reach out us for any inquires or to start your next project.",
-    },
-    wddData : {
-        title : "Contact us",
-        description : "We're here to help. Reach out us for any inquires or to start your next project.",
-    },
-}
