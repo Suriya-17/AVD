@@ -25,8 +25,8 @@ const NavbarContainer = styled.div`
         }
 
         .logo_text {
-            font-size: 1.5rem;
-            font-weight: bold;
+            font-size: 1.35rem;
+            font-weight: 600;
             color: ${(props) => props.theme.colors.backgroundLight};
             margin: 0;
         }
