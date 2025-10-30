@@ -3,206 +3,244 @@ import styled from "styled-components";
 import ApproachCard from "../../components/Services/ApproachCard";
 import StrategyCard from "../../components/Services/StrategyCard";
 import SuccessStoryCard from "../../components/Services/SuccessStoryCard";
-import CommonHero from "../../components/CommonHero"
+import CommonHero from "../../components/CommonHero";
 import { HeroData } from "../../data";
 
-
 const PageContainer = styled.div`
-    position: relative;
     background-color: ${(props) => props.theme.colors.backgroundGrey};
-    padding-bottom: 200px;
     min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 `;
 
-// const HeroContainer = styled.div`
-//     display: flex;
-//     position: relative;
-//     justify-content: center;
-//     flex-direction: column;
-//     align-items: center;
-//     padding: 70px 30px;
-//     color: ${(props) => props.theme.colors.backgroundLight};
-//     min-height: 40vh;
-//     z-index: 1;
-
-//     &::before {
-//         content: "";
-//         position: absolute;
-//         top: 0;
-//         left: 0;
-//         right: 0;
-//         bottom: 0;
-
-//         background-image: url(src/assets/placeholder.png);
-//         background-size: cover;
-//         background-position: center;
-
-//         opacity: 0.4;
-
-//         z-index: -1;
-//     }
-
-//     h1 {
-//         font-family: ${(props) => props.theme.fonts.headingFont};
-//         font-weight: 800;
-//         font-size: 3rem;
-//     }
-
-//     p {
-//         font-family: ${(props) => props.theme.fonts.secondaryFont};
-//         width: 800px;
-//         overflow-wrap: break-word;
-//         text-align: center;
-//         font-size: 18px;
-//     }
-// `;
-
+/* ---------- APPROACH SECTION ---------- */
 const ApproachContainer = styled.div`
     background-color: ${(props) => props.theme.colors.backgroundGrey};
     display: flex;
+    flex-wrap: wrap;
     color: ${(props) => props.theme.colors.backgroundLight};
     padding: 70px 40px;
     justify-content: space-evenly;
-    align-items: center;
+    align-items: flex-start;
+    gap: 40px;
+
+    @media (max-width: 1024px) {
+        flex-direction: column;
+        align-items: center;
+        padding: 60px 30px;
+        gap: 30px;
+    }
 `;
 
 const ApproachText = styled.div`
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 15px;
+    max-width: 600px;
 
     h2 {
         font-family: ${(props) => props.theme.fonts.headingFont};
         font-weight: 600;
         font-size: 2.3rem;
     }
+
     p {
-        width: 800px;
-        overflow-wrap: break-word;
+        font-family: ${(props) => props.theme.fonts.secondaryFont};
+        font-size: 18px;
+        line-height: 1.6;
+        color: ${(props) => props.theme.colors.backgroundLight};
+        text-align: justify;
     }
+
     button {
         background-color: ${(props) => props.theme.colors.primary};
         color: ${(props) => props.theme.colors.backgroundLight};
         font-weight: bold;
-        padding: 8px 20px;
+        padding: 10px 24px;
         border: none;
         border-radius: 8px;
         cursor: pointer;
-        width: 250px;
+        width: fit-content;
+        transition: all 0.3s ease;
     }
+
     button:hover {
         background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)),
             ${(props) => props.theme.colors.primary};
+        transform: translateY(-2px);
+    }
+
+    @media (max-width: 768px) {
+        text-align: center;
+        align-items: center;
+
+        p {
+            width: 100%;
+        }
     }
 `;
+
 const ApproachCardContainer = styled.div`
     display: grid;
-    grid-template-columns: 300px 300px;
-    grid-template-rows: 200px 200px;
+    grid-template-columns: repeat(2, 300px);
+    grid-gap: 30px;
+
+    @media (max-width: 1024px) {
+        grid-template-columns: repeat(2, minmax(250px, 1fr));
+        justify-items: center;
+    }
+
+    @media (max-width: 600px) {
+        grid-template-columns: 1fr;
+        grid-gap: 20px;
+    }
 `;
 
-const StrategyContainer = styled.div`
+/* ---------- STRATEGY SECTION ---------- */
+const StrategyContainer = styled.section`
     background-color: ${(props) => props.theme.colors.backgroundDark};
     color: ${(props) => props.theme.colors.backgroundLight};
     display: flex;
-    padding: 70px 40px;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    min-height: 40vh;
+    padding: 70px 40px;
+    text-align: center;
+
+    @media (max-width: 768px) {
+        padding: 50px 20px;
+    }
 
     h2 {
         font-family: ${(props) => props.theme.fonts.headingFont};
         font-weight: 600;
         font-size: 2.3rem;
+
+        @media (max-width: 768px) {
+            font-size: 1.9rem;
+        }
     }
+
     .sub-text {
         font-family: ${(props) => props.theme.fonts.secondaryFont};
-        width: 600px;
-        text-align: center;
-        overflow-wrap: break-word;
+        max-width: 650px;
+        font-size: 1rem;
+        margin-top: 10px;
+        color: ${(props) => props.theme.colors.textLight};
+        line-height: 1.5;
     }
 `;
 
 const StrategyCardContainer = styled.div`
-    margin-top: 30px;
+    margin-top: 40px;
     display: flex;
-    gap: 60px;
-`;
-const SuccessStoryContainer = styled.div`
-    background-color: ${(props) => props.theme.colors.backgroundGrey};
-    display: flex;
-    flex-direction: column;
-    color: ${(props) => props.theme.colors.backgroundLight};
-    padding: 70px 40px;
+    flex-wrap: wrap;
     justify-content: center;
-    align-items: center;
-    min-height: 40vh;
+    gap: 40px;
+
+    @media (max-width: 576px) {
+        gap: 25px;
+    }
+`;
+
+/* ---------- SUCCESS STORIES SECTION ---------- */
+const SuccessStoryContainer = styled.section`
+    background-color: ${(props) => props.theme.colors.backgroundGrey};
+    color: ${(props) => props.theme.colors.backgroundLight};
+    text-align: center;
+    padding: 70px 40px;
+
+    @media (max-width: 768px) {
+        padding: 50px 20px;
+    }
 
     h2 {
         font-family: ${(props) => props.theme.fonts.headingFont};
         font-weight: 600;
         font-size: 2.3rem;
+
+        @media (max-width: 768px) {
+            font-size: 1.9rem;
+        }
     }
+
     .sub-text {
         font-family: ${(props) => props.theme.fonts.secondaryFont};
-        width: 600px;
-        text-align: center;
-        overflow-wrap: break-word;
+        max-width: 650px;
+        margin: 10px auto 30px auto;
+        color: ${(props) => props.theme.colors.textLight};
+        font-size: 1rem;
+        line-height: 1.5;
     }
 `;
 
 const StoryCardContainer = styled.div`
-    margin-top: 30px;
     display: flex;
-    gap: 60px;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+
+    @media (max-width: 576px) {
+        gap: 25px;
+    }
 `;
 
-const DominateContainer = styled.div`
+/* ---------- DOMINATE SECTION ---------- */
+const DominateContainer = styled.section`
     display: flex;
-    position: relative;
-    gap: 5px;
-    justify-content: center;
     flex-direction: column;
     align-items: center;
+    text-align: center;
     background-color: ${(props) => props.theme.colors.backgroundGrey};
-    padding: 70px 30px;
     color: ${(props) => props.theme.colors.backgroundLight};
-    min-height: 40vh;
+    padding: 70px 30px;
+
+    @media (max-width: 768px) {
+        padding: 50px 20px;
+    }
 
     h2 {
         font-family: ${(props) => props.theme.fonts.headingFont};
         font-weight: 600;
         font-size: 2.3rem;
+
+        @media (max-width: 768px) {
+            font-size: 1.9rem;
+        }
     }
+
     .sub-text {
         font-family: ${(props) => props.theme.fonts.secondaryFont};
-        width: 600px;
-        text-align: center;
-        overflow-wrap: break-word;
+        max-width: 650px;
+        margin: 10px auto;
+        color: ${(props) => props.theme.colors.textLight};
+        font-size: 1rem;
+        line-height: 1.6;
     }
 
     button {
         background-color: ${(props) => props.theme.colors.primary};
         color: ${(props) => props.theme.colors.backgroundLight};
         font-weight: bold;
-        padding: 15px 30px;
+        padding: 14px 30px;
         border: none;
         border-radius: 8px;
         cursor: pointer;
-        margin-top: 15px;
-    }
-    button:hover {
-        background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)),
-            ${(props) => props.theme.colors.primary};
+        margin-top: 20px;
+        transition: background 0.3s ease;
+
+        &:hover {
+            background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)),
+                ${(props) => props.theme.colors.primary};
+        }
     }
 `;
 
 function SEO() {
     return (
         <PageContainer>
-            <CommonHero data = { HeroData.seoData }/>
+            <CommonHero data={HeroData.seoData} />
 
+            {/* Approach Section */}
             <ApproachContainer>
                 <ApproachText>
                     <h2>Our Approach to Social Success</h2>
@@ -222,6 +260,7 @@ function SEO() {
                     </p>
                     <button>Start Your Campaign</button>
                 </ApproachText>
+
                 <ApproachCardContainer>
                     <ApproachCard
                         icon="groups"
@@ -245,33 +284,39 @@ function SEO() {
                     />
                 </ApproachCardContainer>
             </ApproachContainer>
+
+            {/* Strategy Section */}
             <StrategyContainer>
                 <h2>Strategies That Drive Results</h2>
                 <p className="sub-text">
                     Our social media services are tailored to meet your unique
-                    business objectives. Here's a glimpse of what we offer:
+                    business objectives. Here’s a glimpse of what we offer:
                 </p>
+
                 <StrategyCardContainer>
                     <StrategyCard
                         title="Platform Management"
                         desc="Full-service management of your profiles on platforms like Instagram, Facebook, Twitter, LinkedIn, and TikTok."
                     />
                     <StrategyCard
-                        title="Platform Management"
-                        desc="Full-service management of your profiles on platforms like Instagram, Facebook, Twitter, LinkedIn, and TikTok."
+                        title="Creative Campaigns"
+                        desc="Innovative and visually appealing campaigns tailored to your brand's goals."
                     />
                     <StrategyCard
-                        title="Platform Management"
-                        desc="Full-service management of your profiles on platforms like Instagram, Facebook, Twitter, LinkedIn, and TikTok."
+                        title="Engagement Strategy"
+                        desc="Driving real connections with audiences to build long-term loyalty."
                     />
                 </StrategyCardContainer>
             </StrategyContainer>
+
+            {/* Success Stories Section */}
             <SuccessStoryContainer>
                 <h2>Success Stories</h2>
                 <p className="sub-text">
-                    See how we've transformed the social media presence of our
+                    See how we’ve transformed the social media presence of our
                     clients.
                 </p>
+
                 <StoryCardContainer>
                     <SuccessStoryCard
                         image="src/assets/placeholder.png"
@@ -281,22 +326,24 @@ function SEO() {
                     />
                     <SuccessStoryCard
                         image="src/assets/placeholder.png"
-                        clientName="ABC Company"
-                        outcome="200% increase in revenue"
-                        description="Their creative campaigns and consistent engagement strategy dramatically increased our online community and sales."
+                        clientName="XYZ Enterprises"
+                        outcome="3x boost in conversions"
+                        description="Our cross-platform strategy turned engagement into measurable growth for their brand."
                     />
                     <SuccessStoryCard
                         image="src/assets/placeholder.png"
-                        clientName="ABC Company"
-                        outcome="200% increase in revenue"
-                        description="Their creative campaigns and consistent engagement strategy dramatically increased our online community and sales."
+                        clientName="Global Tech"
+                        outcome="150% more engagement"
+                        description="We helped Global Tech dominate their niche with viral content and sustained audience interaction."
                     />
                 </StoryCardContainer>
             </SuccessStoryContainer>
+
+            {/* Dominate CTA Section */}
             <DominateContainer>
                 <h2>Ready to Dominate Social Media?</h2>
                 <p className="sub-text">
-                    Let's create a social media strategy that captivates your
+                    Let’s create a social media strategy that captivates your
                     audience and achieves your business goals.
                 </p>
                 <button>Get Your Free Social Media Audit</button>

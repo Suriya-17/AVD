@@ -10,7 +10,7 @@ const AppContainer = styled.section`
     position: relative;
     background-color: ${(props) => props.theme.colors.backgroundGrey};
     color: ${({theme}) => theme.colors.backgroundLight};
-    padding-bottom: 200px;
+    
     
     min-height: 100vh;
     
