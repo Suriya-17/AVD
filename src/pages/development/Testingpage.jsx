@@ -1,14 +1,11 @@
-import React from 'react';
-import AdminLogin from '../admin/AdminLogin';
+import React from "react";
+import AdminLogin from "../admin/AdminLogin";
 
 function Testingpage() {
     return (
         <>
-        <AdminLogin/>
-    
+            <AdminLogin />
         </>
-
-    )
+    );
 }
 export default Testingpage;
-

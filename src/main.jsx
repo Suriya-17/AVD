@@ -21,6 +21,8 @@ import ContentMarketing from "./pages/services/ContentMarketing.jsx";
 import EmailMarketing from "./pages/services/EmailMarketing.jsx";
 import WebDesign from "./pages/services/WebDesign.jsx";
 
+import AdminLogin from "./pages/admin/AdminLogin.jsx";
+
 const router = createBrowserRouter([
     {
         path: "/",
@@ -70,6 +72,10 @@ const router = createBrowserRouter([
                 path: "contact",
                 element: <Contact />,
             },
+            {
+                path: "admin",
+                element:<AdminLogin/>,
+            }
         ],
     },
     {
